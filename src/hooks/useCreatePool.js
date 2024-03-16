@@ -1,7 +1,8 @@
 import { useWeb3ModalAccount, useWeb3ModalProvider } from "@web3modal/ethers/react"
-import { isSupportedChainId } from "../utils";
+import { isSupportedChainId, stakingPoolContractAddress } from "../utils";
 import { readAndChangeState } from "../constants/providers";
 import { getStakingPoolContract } from "../constants/getContracts";
+import StakingPoolAbi from "../constants/StakingPoolAbi.json"
 
 
 const useCreatePool = (rewardRate) => {
@@ -11,7 +12,7 @@ const useCreatePool = (rewardRate) => {
         if(!isSupportedChainId(chainId)) return "Not in the supported network";
         const provider = readAndChangeState(walletProvider);
         const signer = await provider.getSigner();
-        const contract = getStakingPoolContract(signer, "0xf4FCf7F898b07232176463afbC18cf7614E6e158");
+        const contract = getStakingPoolContract(signer, stakingPoolContractAddress, StakingPoolAbi);
         try{
             const tx = await contract.createPool(rewardRate);
             const receipt = await tx.wait();

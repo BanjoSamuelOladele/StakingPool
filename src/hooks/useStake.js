@@ -1,5 +1,5 @@
 import { useWeb3ModalAccount, useWeb3ModalProvider } from "@web3modal/ethers/react";
-import { isSupportedChainId } from "../utils";
+import { isSupportedChainId, stakeTokenContractAddress, stakingPoolContractAddress } from "../utils";
 import { readAndChangeState } from "../constants/providers";
 import { getStakingPoolContract } from "../constants/getContracts";
 import StakingPoolAbi from "../constants/StakingPoolAbi.json";
@@ -18,9 +18,9 @@ const useStake = (amount) => {
         const provider = readAndChangeState(walletProvider);
         const signer = await provider.getSigner();
 
-        const contract = getStakingPoolContract(signer, "0xf4FCf7F898b07232176463afbC18cf7614E6e158", StakingPoolAbi);
+        const contract = getStakingPoolContract(signer, stakingPoolContractAddress, StakingPoolAbi);
 
-        const stakeToken = getStakingPoolContract(signer, "", StakingTokenAbi);
+        const stakeToken = getStakingPoolContract(signer, stakeTokenContractAddress, StakingTokenAbi);
 
 
         try{
