@@ -1,4 +1,4 @@
-import { getStakingPoolContract } from "../constants/getStakingPoolContract";
+import { getStakingPoolContract, getStakingTokenContract } from "../constants/getContracts";
 import { readAndChangeState } from "../constants/providers";
 
 
@@ -9,3 +9,11 @@ export const readAndWriteStakingPool = async (provider) => {
     const signer = await changeAndRead.getSigner();
     return getStakingPoolContract(signer);
 }
+
+
+export const readAndWriteStakingToken = async (provider) => {
+    const changeAndRead = readAndChangeState(provider);
+    const signer = await changeAndRead.getSigner();
+    return getStakingTokenContract(signer);
+}
+
