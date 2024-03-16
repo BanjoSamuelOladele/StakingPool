@@ -1,7 +1,8 @@
 import { Box, Tabs, Text } from "@radix-ui/themes";
+import Pools from "./Pools";
 
 
-const Tab = () => {
+const Tab = (props) => {
 
     return (<Tabs.Root defaultValue="account">
             <Tabs.List size={"2"}>
@@ -12,7 +13,7 @@ const Tab = () => {
 
             <Box px="4" pt="3" pb="2">
               <Tabs.Content value="account">
-                <Text size="2">Make changes to your account.</Text>
+                <Pools />
               </Tabs.Content>
 
               <Tabs.Content value="documents">
