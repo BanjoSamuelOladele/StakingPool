@@ -13,3 +13,9 @@ export const getStakingTokenContract = (signer) = new ethers.Contract(
     "",
     signer
 );
+
+export const getRewardTokenContract = (signer) = new ethers.Contract(
+    "",
+    "",
+    signer
+);
