@@ -3,7 +3,7 @@ import { Box, Tabs, Text } from "@radix-ui/themes";
 
 const Tab = () => {
 
-return (<Tabs.Root defaultValue="account">
+    return (<Tabs.Root defaultValue="account">
             <Tabs.List size={"2"}>
               <Tabs.Trigger value="account">Staking Pool</Tabs.Trigger>
               <Tabs.Trigger value="documents">Staking Token</Tabs.Trigger>
