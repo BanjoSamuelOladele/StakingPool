@@ -8,7 +8,7 @@ import StakingTokenAbi from "../constants/StakingTokenAbi.json";
 
 // 0xf4FCf7F898b07232176463afbC18cf7614E6e158
 
-const useStake = (amount) => {
+const useStake = (poolId, amount) => {
     const {chainId} = useWeb3ModalAccount();
     const {walletProvider} = useWeb3ModalProvider();
     if(typeof(amount) !== Number) return "Amount to stake must be a number";
@@ -26,7 +26,7 @@ const useStake = (amount) => {
         try{
             const check = stakeToken.allowance(signer, "");
             if (check >= amount){
-                const staking = await contract.stake(amount);
+                const staking = await contract.stake(poolId, amount);
                 const receipt = await staking.wait();
 
                 if(receipt.status){
