@@ -3,9 +3,9 @@ import { Flex } from "@radix-ui/themes";
 
 const Header = () => {
     return(
-        <div>
-            <Flex gap={"3"}>
-                <h3>Staking Pool</h3>
+        <div className="flex justify-between items-center">
+            Staking Pool
+            <Flex justify={"between"} direction={"row"} display={"inline-flex"} align={"center"} gap={"7"}>
                 <w3m-button />
             </Flex>
         </div>
