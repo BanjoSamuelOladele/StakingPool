@@ -1,11 +1,9 @@
 import { Box, Tabs, Text } from "@radix-ui/themes";
-import Pools from "./Pools";
-import usePools from "../hooks/usePools";
+// import Pools from "./Pools";
+// import usePools from "../hooks/usePools";
 
 
 const Tab = () => {
-  const pools = usePools();
-  console.log("pooling", pools)
     return (<Tabs.Root defaultValue="Staking_Pool">
             <Tabs.List size={"2"}>
               <Tabs.Trigger value="Staking_Pool">Staking Pool</Tabs.Trigger>
@@ -15,16 +13,15 @@ const Tab = () => {
 
             <Box px="4" pt="3" pb="2">
               <Tabs.Content value="Staking_Pool">
-                {
-                  pools.map(item => (
+                {/* {pools.map((pool, index) => (
                     <Pools
-                      totalStakers={item.totalStakers}
-                      totalStaked={item.totalStaked}
-                      rewardReserve={item.rewardReserve}
-                      rewardRate={item.rewardRate}
+                      key={index}
+                      totalStakers={pool.totalStakers}
+                      totalStaked={pool.totalStaked}
+                      rewardReserve={pool.rewardReserve}
+                      rewardRate={pool.rewardRate}
                     />
-                  ))
-                }
+                  ))} */}
               </Tabs.Content>
 
               <Tabs.Content value="Staking_Token">

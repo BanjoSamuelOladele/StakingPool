@@ -1,21 +1,10 @@
 import { ethers } from "ethers";
-import StakingPoolAbi from "./StakingPoolAbi.json";
+// import StakingPoolAbi from "./StakingPoolAbi.json";
+// import StakingTokenAbi from "./StakingTokenAbi.json"
 
 
-export const getStakingPoolContract = (signer) => new ethers.Contract(
-    "0xf4FCf7F898b07232176463afbC18cf7614E6e158",
-    StakingPoolAbi,
+export const getStakingPoolContract = (signer, contractAddress, abi) => new ethers.Contract(
+    contractAddress,
+    abi,
     signer
 );
-
-// export const getStakingTokenContract = (signer) = new ethers.Contract(
-//     "",
-//     "",
-//     signer
-// );
-
-// export const getRewardTokenContract = (signer) = new ethers.Contract(
-//     "",
-//     "",
-//     signer
-// );

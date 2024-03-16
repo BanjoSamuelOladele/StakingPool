@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getStakingPoolContract } from "../constants/getContracts";
 import { readOnlyState } from "../constants/providers";
+import StakingPoolAbi from "../constants/StakingPoolAbi.json"
 
 
 const poolers = {
@@ -15,7 +16,7 @@ const usePools = () => {
 
     const [pools, setPools] = useState([]);
 
-    const contract = getStakingPoolContract(readOnlyState);
+    const contract = getStakingPoolContract(readOnlyState, "0xf4FCf7F898b07232176463afbC18cf7614E6e158", StakingPoolAbi);
 
     useEffect(() => {
         let allPools = []

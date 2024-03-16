@@ -11,7 +11,7 @@ const useCreatePool = (rewardRate) => {
         if(!isSupportedChainId(chainId)) return "Not in the supported network";
         const provider = readAndChangeState(walletProvider);
         const signer = await provider.getSigner();
-        const contract = getStakingPoolContract(signer);
+        const contract = getStakingPoolContract(signer, "0xf4FCf7F898b07232176463afbC18cf7614E6e158");
         try{
             const tx = await contract.createPool(rewardRate);
             const receipt = await tx.wait();
