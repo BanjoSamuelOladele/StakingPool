@@ -22,7 +22,7 @@ const metadata = {
   icons: ['https://avatars.mywebsite.com/']
 }
 
-
+// Websocket connection failed for host: wss://relay.walletconnect.org
 // 5. Create a Web3Modal instance
 export const configureWeb3Modal = () => {
     createWeb3Modal({
