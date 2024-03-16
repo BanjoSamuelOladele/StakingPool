@@ -1,22 +1,22 @@
 import { Box, Card, Flex, Text } from "@radix-ui/themes";
 
 
-const Pools = () => {
+const Pools = ({totalStakers, totalStaked, rewardReserve, rewardRate}) => {
     return(
-        <Card style={{ maxWidth: 240 }}>
+        <Card >
             <Flex gap="3" align="center">
                 <Box>
                     <Text as="div" size="2" weight="bold">
-                        TotalStakers
+                        TotalStakers: {totalStakers}
                     </Text>
                     <Text as="div" size="2" weight="bold" color="gray">
-                        TotalStaked
+                        TotalStaked: {totalStaked}
                     </Text>
                     <Text as="div" size="2" weight="bold" color="gray">
-                        RewardReserve
+                        RewardReserve: {rewardReserve}
                     </Text>
                     <Text as="div" size="2" weight="bold" color="gray">
-                        RewardRate
+                        RewardRate: {rewardRate}
                     </Text>
                 </Box>
             </Flex>
