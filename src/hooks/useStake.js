@@ -44,7 +44,7 @@ const useStake = (amount) => {
             console.error(error);
         }
       },
-      [second],
+      [amount, chainId, walletProvider],
     )
     
 }
