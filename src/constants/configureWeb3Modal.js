@@ -24,11 +24,11 @@ const metadata = {
 
 
 // 5. Create a Web3Modal instance
-export const configureWeb3Modal = () =>{
+export const configureWeb3Modal = () => {
     createWeb3Modal({
-    ethersConfig: defaultConfig({metadata}),
-    chains: [sepolia],
-    projectId,
-    enableAnalytics: false // Optional - defaults to your Cloud configuration
+        ethersConfig: defaultConfig({metadata}),
+        chains: [sepolia],
+        projectId,
+        enableAnalytics: false // Optional - defaults to your Cloud configuration
     })
 }

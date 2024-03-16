@@ -1,8 +1,10 @@
+import { configureWeb3Modal } from "./constants/configureWeb3Modal";
 
+configureWeb3Modal();
 
 function App() {
   return (
-    <>hi</>
+    <w3m-button />
   );
 }
 
