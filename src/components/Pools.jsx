@@ -7,10 +7,16 @@ const Pools = () => {
             <Flex gap="3" align="center">
                 <Box>
                     <Text as="div" size="2" weight="bold">
-                        Teodros Girmay
+                        TotalStakers
                     </Text>
-                    <Text as="div" size="2" color="gray">
-                        Engineering
+                    <Text as="div" size="2" weight="bold" color="gray">
+                        TotalStaked
+                    </Text>
+                    <Text as="div" size="2" weight="bold" color="gray">
+                        RewardReserve
+                    </Text>
+                    <Text as="div" size="2" weight="bold" color="gray">
+                        RewardRate
                     </Text>
                 </Box>
             </Flex>
