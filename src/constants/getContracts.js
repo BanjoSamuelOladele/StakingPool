@@ -1,10 +1,10 @@
 import { ethers } from "ethers";
-import StakingAbi from "./StakingAbi.json";
+import StakingPoolAbi from "./StakingPoolAbi.json";
 
 
 export const getStakingPoolContract = (signer) => new ethers.Contract(
     "",
-    StakingAbi,
+    StakingPoolAbi,
     signer
 );
 
